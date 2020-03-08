@@ -5,6 +5,8 @@ Route::get('/', function () {
 });
 
 Route::get('post', 'PostController@index');
-Route::get('post/store', 'PostController@store');
-Route::get('post/update/{id}', 'PostController@update');
+Route::get('post/create', 'PostController@create');
+Route::post('post', 'PostController@store');
+Route::get('/post/edit/{id}', 'PostController@edit');
+Route::post('post/edit/{id}', 'PostController@update');
 Route::get('post/destroy/{id}', 'PostController@destroy');
